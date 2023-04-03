@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="shipmentPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="351.0" prefWidth="551.0" style="-fx-background-color: #F0F0F0; -fx-background-radius: 20px;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clientGUIControllers.SelfCollectionDetailsController">
+   <children>
+      <Label layoutX="194.0" layoutY="73.0" stylesheets="@../stylesSheets/generalDesign.css" text="Enter self collection details:" textAlignment="CENTER" />
+      <Label layoutX="324.0" layoutY="112.0" stylesheets="@../stylesSheets/generalDesign.css" text="Facility:" />
+      <Label layoutX="109.0" layoutY="114.0" stylesheets="@../stylesSheets/generalDesign.css" text="Area:" />
+      <Label layoutX="198.0" layoutY="23.0" style="-fx-font-family: elephant; -fx-font-size: 200%;" stylesheets="@../stylesSheets/generalDesign.css" text="Self Collection" underline="true" />
+      <Label layoutX="183.0" layoutY="62.0" prefHeight="44.0" prefWidth="54.0" style="-fx-text-fill: red; -fx-font-size: 200%;" stylesheets="@../stylesSheets/generalDesign.css" text="*" />
+      <ComboBox fx:id="areaCombo" layoutX="109.0" layoutY="144.0" onAction="#areaComboPressed" prefHeight="38.0" prefWidth="150.0" promptText="Select Area" stylesheets="@../stylesSheets/generalDesign.css" />
+      <ComboBox fx:id="facilityCombo" layoutX="324.0" layoutY="142.0" onAction="#facilityComboPressed" prefHeight="38.0" prefWidth="160.0" promptText="Select Facility" stylesheets="@../stylesSheets/generalDesign.css" />
+      <Label layoutX="210.0" layoutY="203.0" styleClass="textlabel" stylesheets="@../stylesSheets/generalDesign.css" text="Supply date:" />
+      <DatePicker fx:id="datePicker" editable="false" layoutX="210.0" layoutY="233.0" prefHeight="38.0" prefWidth="160.0" promptText="dd/MM/yyyy" style="-fx-border-color: #00ace6; -fx-border-width: 2px; -fx-background-radius: 20px; -fx-border-radius: 10px;" />
+      <Label id="errorLabel" fx:id="errorLabel" contentDisplay="CENTER" layoutX="100.0" layoutY="268.0" prefHeight="62.0" prefWidth="348.0" stylesheets="@../stylesSheets/generalDesign.css" textAlignment="CENTER" wrapText="true" />
+   </children>
+</AnchorPane>

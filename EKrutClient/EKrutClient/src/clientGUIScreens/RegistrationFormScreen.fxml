@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.3" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../stylesSheets/generalDesign.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clientGUIControllers.RegistrationFormController">
+   <items>
+      <AnchorPane id="leftPane" prefHeight="648.0" prefWidth="338.0">
+         <children>
+            <Button id="logOutBtn" fx:id="logOutBtn" layoutX="193.0" layoutY="602.0" mnemonicParsing="false" onAction="#logOutPressed" text="Log out" />
+            <Button fx:id="backBtn" layoutX="22.0" layoutY="604.0" mnemonicParsing="false" onAction="#backPressed" text="&lt;" />
+            <Label fx:id="helpLabel" layoutX="8.0" layoutY="197.0" prefHeight="367.0" prefWidth="275.0" wrapText="true" />
+            <ImageView fx:id="logoImage" fitHeight="160.0" fitWidth="160.0" layoutX="55.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+      <AnchorPane id="rightPane" prefHeight="648.0" prefWidth="597.0">
+         <children>
+            <Label fx:id="titleLabel" layoutX="102.0" layoutY="59.0" style="-fx-font-family: elephant; -fx-font-size: 30;" text="Registered customer registration" />
+            <Button id="xBtn" layoutX="610.0" layoutY="14.0" mnemonicParsing="false" onAction="#xPressed" text="X" fx:id="xBtn" />
+            <Button fx:id="makeRegistrationBtn" layoutX="503.0" layoutY="600.0" mnemonicParsing="false" onAction="#makeregistrationPressed" text="Make registration" />
+            <Button fx:id="helpBtn" layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onAction="#helpPreesed" text="Help" />
+            <Label fx:id="usernamelbl" layoutX="43.0" layoutY="400.0" prefHeight="27.0" prefWidth="89.0" text="Username:" />
+            <TextField fx:id="usernameTextField" layoutX="42.0" layoutY="427.0" prefHeight="29.0" prefWidth="133.0" promptText="username" />
+            <Label fx:id="passwordlbl" layoutX="202.0" layoutY="537.0" prefHeight="27.0" prefWidth="89.0" text="Password:" />
+            <TextField fx:id="passwordTextField" layoutX="193.0" layoutY="560.0" prefHeight="29.0" prefWidth="133.0" promptText="password" />
+            <Label fx:id="firstnamelbl" layoutX="48.0" layoutY="468.0" prefHeight="27.0" prefWidth="122.0" text="First name:" />
+            <TextField fx:id="firstnameTextField" layoutX="42.0" layoutY="491.0" prefHeight="29.0" prefWidth="133.0" promptText="Enter first name" />
+            <Label fx:id="lastnamelbl" layoutX="48.0" layoutY="537.0" prefHeight="27.0" prefWidth="122.0" text="Last name:" />
+            <TextField fx:id="lastNameTextField" layoutX="42.0" layoutY="560.0" prefHeight="29.0" prefWidth="133.0" promptText="Enter last name" />
+            <Label fx:id="emaillbl" layoutX="200.0" layoutY="468.0" prefHeight="27.0" prefWidth="89.0" text="Email:" />
+            <TextField fx:id="emailTextField" layoutX="193.0" layoutY="491.0" prefHeight="29.0" prefWidth="133.0" promptText="Enter email" />
+            <Label fx:id="statuslbl" layoutX="354.0" layoutY="537.0" prefHeight="27.0" prefWidth="122.0" text="User Status:" />
+            <ComboBox fx:id="userStatusCombo" layoutX="350.0" layoutY="561.0" prefWidth="150.0" />
+            <Label fx:id="arealbl" layoutX="348.0" layoutY="468.0" prefHeight="27.0" prefWidth="133.0" text="Default Area: " />
+            <ComboBox fx:id="areaCombo" layoutX="350.0" layoutY="492.0" prefWidth="150.0" />
+            <Label layoutX="51.0" layoutY="262.0" prefHeight="16.0" prefWidth="176.0" text="Credit Card Number:" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="92.0" layoutY="195.0" prefHeight="59.0" prefWidth="389.0" text="Extra details for user of type registered customer:" textAlignment="CENTER" underline="true" wrapText="true" />
+            <TextField fx:id="creditCardNumTextField" layoutX="48.0" layoutY="290.0" prefHeight="29.0" prefWidth="182.0" promptText="Enter credit card number" />
+            <Label layoutX="265.0" layoutY="262.0" prefHeight="20.0" prefWidth="42.0" text="CVV:" />
+            <TextField fx:id="cvvTextField" layoutX="261.0" layoutY="290.0" prefHeight="29.0" prefWidth="51.0" promptText="000" />
+            <Label alignment="CENTER" contentDisplay="CENTER" layoutX="396.0" layoutY="259.0" prefHeight="27.0" prefWidth="107.0" text="Expiry Date:" textAlignment="CENTER" />
+            <ComboBox fx:id="monthCombo" layoutX="394.0" layoutY="291.0" prefHeight="27.0" prefWidth="89.0" promptText="Month" />
+            <ComboBox fx:id="yearCombo" layoutX="491.0" layoutY="291.0" prefHeight="27.0" prefWidth="89.0" promptText="Year" />
+            <TextField fx:id="idTextField" layoutX="193.0" layoutY="427.0" prefHeight="29.0" prefWidth="133.0" promptText="Enter id" />
+            <Label fx:id="idlbl" layoutX="197.0" layoutY="400.0" prefHeight="27.0" prefWidth="89.0" text="Id:" />
+            <Label fx:id="telephonelbl" layoutX="349.0" layoutY="400.0" prefHeight="27.0" prefWidth="89.0" text="Telephone:">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <TextField fx:id="telephoneTextField" layoutX="348.0" layoutY="427.0" prefHeight="29.0" prefWidth="133.0" promptText="Enter telephone" />
+            <Label fx:id="subscriberNumberLabel" layoutX="51.0" layoutY="156.0" prefHeight="27.0" prefWidth="162.0" text="Subscriber number:" />
+            <TextField fx:id="subscriberNumTextField" layoutX="225.0" layoutY="155.0" prefHeight="29.0" prefWidth="72.0" />
+            <Label fx:id="subscriberDetailsLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="89.0" layoutY="99.0" prefHeight="59.0" prefWidth="316.0" text="Extra details for user of type subscriber:" textAlignment="CENTER" underline="true" wrapText="true" />
+            <Label id="errorLabel" fx:id="errorlabel" alignment="TOP_LEFT" layoutX="10.0" layoutY="598.0" prefHeight="38.0" prefWidth="486.0" stylesheets="@../stylesSheets/generalDesign.css" wrapText="true" />
+            <ImageView fx:id="creditcardImage" fitHeight="44.0" fitWidth="50.0" layoutX="43.0" layoutY="199.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="subscriberImage" fitHeight="38.0" fitWidth="42.0" layoutX="51.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true" />
+            <Button fx:id="viewBtn" layoutX="281.0" layoutY="353.0" mnemonicParsing="false" onAction="#viewPressed" prefHeight="29.0" prefWidth="89.0" text="View" />
+            <Button fx:id="hideBtn" layoutX="282.0" layoutY="353.0" mnemonicParsing="false" onAction="#hidePressed" prefHeight="29.0" prefWidth="89.0" text="Hide" />
+            <Label fx:id="userGeneralSetailsLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="93.0" layoutY="329.0" prefHeight="66.0" prefWidth="176.0" text=" User's general details:" textAlignment="CENTER" underline="true" wrapText="true" />
+            <ImageView fx:id="usersDetailsImage" fitHeight="38.0" fitWidth="42.0" layoutX="51.0" layoutY="343.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+   </items>
+</SplitPane>

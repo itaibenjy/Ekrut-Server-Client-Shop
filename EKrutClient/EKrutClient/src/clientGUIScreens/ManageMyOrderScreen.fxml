@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<SplitPane dividerPositions="0.3" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: transparent;" stylesheets="@../stylesSheets/generalDesign.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clientGUIControllers.ManageMyOrderController">
+   <items>
+      <AnchorPane id="leftPane" prefHeight="398.0" prefWidth="182.0">
+         <children>
+            <Button id="backBtn" fx:id="backBtn" layoutX="22.0" layoutY="604.0" mnemonicParsing="false" onAction="#backPressed" text="&lt;" />
+            <Button id="logOutBtn" fx:id="logOutBtn" layoutX="193.0" layoutY="602.0" mnemonicParsing="false" onAction="#logOutPressed" text="Log out" />
+            <ImageView fx:id="logoIMG" fitHeight="160.0" fitWidth="160.0" layoutX="55.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="helpLabel" layoutX="42.0" layoutY="300.0" prefHeight="151.0" prefWidth="206.0" text="On this page you can see all your orders and their details, as well as confirm the deliveries you have already received." wrapText="true" />
+         </children>
+      </AnchorPane>
+      <AnchorPane id="rightPane" prefHeight="398.0" prefWidth="213.0">
+         <children>
+            <Button id="xBtn" layoutX="610.0" layoutY="14.0" mnemonicParsing="false" onAction="#xPressed" text="X" fx:id="xBtn" />
+            <ComboBox fx:id="orderBox" layoutX="336.0" layoutY="149.0" onAction="#selectOrder" prefWidth="150.0" promptText="Select Order" />
+            <Label fx:id="chooseOrderLabel" layoutX="207.0" layoutY="153.0" text="Choose order :" />
+            <Label layoutX="175.0" layoutY="56.0" styleClass="headline" text="Manage my order" />
+            <TableView fx:id="orderTable" layoutX="130.0" layoutY="194.0" prefHeight="123.0" prefWidth="412.0">
+               <columns>
+                  <TableColumn fx:id="c1" maxWidth="200.0" minWidth="170.39995956420898" prefWidth="170.39995956420898" resizable="false" text="product name" />
+                  <TableColumn fx:id="c2" maxWidth="152.8000946044922" minWidth="120.0" prefWidth="136.8000946044922" resizable="false" text="quantity" />
+                  <TableColumn fx:id="c3" maxWidth="102.4000244140625" minWidth="84.0" prefWidth="99.20001220703125" resizable="false" text="price" />
+               </columns>
+            </TableView>
+            <ComboBox fx:id="statusCombo" layoutX="265.0" layoutY="548.0" onAction="#selectStatus" prefHeight="27.0" prefWidth="132.0" />
+            <Label fx:id="supplyMethod" layoutX="67.0" layoutY="341.0" text="Supply method:" underline="true" />
+            <Label fx:id="orderDate" layoutX="390.0" layoutY="341.0" text="Order date:" underline="true" />
+            <Label fx:id="totalPrice" layoutX="212.0" layoutY="489.0" text="Total price:" underline="true" />
+            <Label fx:id="orderStatus" layoutX="112.0" layoutY="552.0" text="Order status :" underline="true" />
+            <Button fx:id="updateBtn" layoutX="446.0" layoutY="549.0" mnemonicParsing="false" onAction="#updatePressed" text="Update" />
+            <Label fx:id="supplyAddress" layoutX="67.0" layoutY="389.0" prefHeight="18.0" prefWidth="132.0" text="supplyAddress:" underline="true" />
+            <Label fx:id="sMethod" layoutX="210.0" layoutY="341.0" text="Label" />
+            <Label fx:id="sAddress" layoutX="210.0" layoutY="389.0" text="Label" />
+            <Label fx:id="priceLabel" layoutX="321.0" layoutY="489.0" text="Label" />
+            <Label fx:id="dateLabel" layoutX="497.0" layoutY="341.0" text="Label" />
+            <Label fx:id="estimateDateHead" layoutX="67.0" layoutY="436.0" text="Estimate delivery date:" underline="true" />
+            <Label fx:id="estimateDate" layoutX="259.0" layoutY="436.0" prefHeight="19.0" prefWidth="120.0" text="Label" />
+            <Label fx:id="waitingLabel" layoutX="31.0" layoutY="436.0" prefHeight="54.0" prefWidth="614.0" text="Label" visible="false" wrapText="true" />
+            <ImageView fx:id="manageOrdersIMG" fitHeight="78.0" fitWidth="92.0" layoutX="52.0" layoutY="56.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="statusIMG" fitHeight="63.0" fitWidth="77.0" layoutX="542.0" layoutY="530.0" pickOnBounds="true" preserveRatio="true" />
+            <Button id="helpBtn" fx:id="helpBtn" layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onAction="#helpPressed" text="Help" />
+         </children>
+      </AnchorPane>
+   </items>
+</SplitPane>

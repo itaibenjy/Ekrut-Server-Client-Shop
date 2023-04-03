@@ -1,0 +1,272 @@
+
+.SplitPane {
+    -fx-Pref-Width: 756;
+    -fx-Pref-Height: 505;
+    -fx-background-color: #edf2f4;
+    -fx-layout-x: 224;
+    -fx-lyout-y: -1;
+    -fx-Divider-Positions:0.3;
+  
+}
+
+
+/* Start Table View style */
+.table-view {
+    -fx-background-color: transparent;
+}
+.table-view .text {
+       -fx-fill: black ;
+}
+     
+.table-view .column-header-background .filler {
+    -fx-background-color: transparent;
+}
+.table-view .corner {
+    -fx-background-color: transparent;
+}
+/* header colorers */
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(to bottom, #00ace6, #B9D9EB);
+    -fx-background-radius: 7.0px 7.0px 0.0px 0.0px;
+    -fx-background-insets: 0.0 0.0px 0.0 0.0;
+    -fx-padding: 0.0 0.0 5.0px 0.0;
+}
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+/* Cells and Rows */
+.table-view .table-cell{
+	-fx-border-width: 2;
+    -fx-padding: 2.0 0.0 2.0 10.0px;
+}
+.table-row-cell:hover {
+    -fx-background-color: #e6faff;
+    -fx-text-background-color: #1a75ff;
+}
+.table-row-cell:odd{
+    -fx-background-color: #F0F8FF;
+    -fx-background-insets: 0.0, 0.0 0.0 1.0 0.0;
+    -fx-padding: 0.0em;
+}
+.table-row-cell:even{
+    -fx-background-color: #EBFCFF;
+    -fx-background-insets: 0.0, 0.0 0.0 1.0 0.0;
+    -fx-padding: 0.0em;
+}
+
+ .table-row-cell {
+    -fx-cell-size: 35.0px;
+}
+
+/* Scroll bars */
+.table-view .virtual-flow .scroll-bar:vertical,
+.table-view .virtual-flow .scroll-bar:vertical .track,
+.table-view .virtual-flow .scroll-bar:vertical .track-background,
+.table-view .virtual-flow .scroll-bar:horizontal,
+.table-view .virtual-flow .scroll-bar:horizontal .track,
+.table-view .virtual-flow .scroll-bar:horizontal .track-background {
+    -fx-background-color: transparent;
+}
+.table-view .virtual-flow .scroll-bar .increment-button,
+.table-view .virtual-flow .scroll-bar .decrement-button {
+    -fx-opacity: 0.0;
+    -fx-padding: 2.0;
+    }
+    .table-view .virtual-flow .scroll-bar:vertical .thumb{
+    -fx-background-color:  linear-gradient(to bottom, #1dbbdd44,  #ccf5ff);
+}
+.table-view .virtual-flow .scroll-bar:horizontal .thumb {
+    -fx-background-color:  linear-gradient(to right, #1dbbdd44,  #ccf5ff);
+}
+     
+.table-row-cell:selected {
+	-fx-background-color: #cccccc ;
+}   
+
+.table-row-cell:selected .text {
+       -fx-fill: black ;
+       -fx-font-weight: bolder;
+
+}
+       
+.button{
+
+     -fx-effect: dropshadow(gaussian, rgba(0.0, 0.0, 0.0, 0.3), 10.0, 0.5, 0.0, 0.0);
+
+    /*border*/
+    -fx-border-radius: 20.0px;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 2.0px;
+    /*text*/
+    -fx-text-fill: white;
+    -fx-font-size: 15.0px;
+    -fx-font-weight: bolder;
+    -fx-font-family: sans-serif; /*Gill Sans*/
+    -fx-font-size: 100.0%;
+    -fx-style: normal;
+    -fx-font-variant: common-ligatures tabular-nums;
+    -fx-justify-content: center;
+    /*background*/
+    
+       /*-fx-background-color: linear-gradient(from 25.0% 25.0% to 100.0% 100.0%,#3accdf,#00ace6 ,#00ace6,#00ace6,#00ace6,#00ace6,#3accdf,#3accdf);*/
+  /*  -fx-background-color: radial-gradient(focus-angle 45deg , focus-distance 20% , center 25% 25% , radius 50% , reflect, #00ace6, #3accdf 75% , #3accdf);*/
+       -fx-background-color: radial-gradient(center 50% 50% , radius 90% , #00ace6,#a7dff1);
+
+    -fx-background-radius: 20.0px;
+    /*other*/
+    -fx-height: 10.0px;
+    -fx-flex: 1.0 30.0px;
+    -fx-align-items: center;
+    -fx-cursor: pointer;
+    -fx-Pref-Height:28.0;
+
+    
+}
+
+/* Add a hover effect for buttons */
+/*hover selector to change the style of the button when you move the mouse over it.*/
+
+.button:hover {
+    
+    -fx-color: #cde3f0e8;
+    -fx-transition-duration: 5s;
+    -fx-opacity: 0.7;
+    -fx-cursor: pointer;
+   
+  }
+
+
+.label {
+    /*text*/
+    /*test */
+    -fx-text-fill: black;
+    -fx-font-weight: bolder;
+    -fx-font-size: 120%;
+    -fx-style: normal;
+    -fx-font-variant: common-ligatures tabular-nums;
+    -fx-justify-content: center;
+    /*-fx-text-align:center;*/
+}
+
+.headline {
+    -fx-text-fill: black;
+    -fx-font-weight: bolder;
+    -fx-font-family: elephant; /*Gill Sans*/
+    -fx-font-size: 350%;
+    -fx-style: normal;
+    -fx-font-variant: elephant;
+    -fx-justify-content: center;
+    
+}
+
+.text-field {
+    /*border*/
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+    -fx-border-color: #00ace6;
+    -fx-border-width: 2px;
+ 
+   
+}
+
+
+/*split pane --> AnchorPane , Anchor pane*/
+
+/*Partition location*/
+.split-pane:horizontal {
+    -fx-divider-positions: 0.3183;
+}
+
+/*That the partition be transparent*/
+.split-pane-divider{
+    -fx-region-background:transparent;
+}
+
+
+/*Left pane design--> AnchorPane --> id=leftPane*/
+#leftPane {
+    -fx-pref-Width: 237;
+    -fx-pref-Height: 503;
+    -fx-display: flex;
+    -fx-justify-content: center;
+    -fx-align-items: center;
+   -fx-background-color: linear-gradient(to bottom,#00ace6, #3accdf,#40E0D0,#ffffff );
+
+   
+}
+
+
+/*Right pane design--> AnchorPane --> id=rightPane*/
+#rightPane {
+    -fx-pref-Width: 511;
+    -fx-pref-Height: 503;
+    -fx-display: flex;
+    -fx-justify-content: center;
+    -fx-align-items: center;
+    -fx-background-color: #ffffff;
+}
+
+#confirmaction {
+    -fx-text-fill: rgb(0, 164, 29);
+    -fx-font-weight: bolder;
+    -fx-font-family: sans-serif;
+    -fx-font-size: 90%;
+    -fx-style: normal;
+    -fx-font-variant: common-ligatures tabular-nums;
+    -fx-justify-content: center;
+}
+
+/*Left pane design--> Hbox --> id=leftPane*/
+#scrollPane {
+    -fx-display: flex;
+    -fx-justify-content: center;
+    -fx-align-items: center;
+    -fx-background-color: #00ace6;
+}
+
+
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background-radius: 10px;
+}
+
+.scroll-bar:horizontal, .scroll-bar:vertical {
+    -fx-background-color: #C2C9CB;
+}
+
+    .scroll-bar:horizontal .thumb,
+    .scroll-bar:vertical .thumb {
+        -fx-background-color: white;
+        -fx-background-radius: 5em;
+    }
+
+.scroll-pane > .corner {
+    -fx-background-color: transparent;
+}
+#headline {
+    -fx-text-fill: black;
+    -fx-font-weight: bolder;
+    -fx-font-family: elephant; /*Gill Sans*/
+    -fx-font-size: 31px;
+    -fx-style: normal;
+    -fx-font-variant: elephant;
+    -fx-justify-content: center;
+    
+}
+.text-area{
+	   -fx-border-color: linear-gradient(#00ace6, #3accdf,#40E0D0,#00ace6 );
+	   -fx-border-width:3;
+	 -fx-text-fill: black;
+    -fx-font-weight: bolder;
+	
+}
+.text-area .scroll-pane {
+    -fx-background-color: transparent;
+}
+.text-area .scroll-pane .viewport{
+    -fx-background-color: transparent;
+}
+.text-area .scroll-pane .content{
+    -fx-background-color: transparent;
+}

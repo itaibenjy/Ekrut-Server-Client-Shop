@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<SplitPane dividerPositions="0.3" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1251.0" stylesheets="@../stylesSheets/generalDesign.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clientGUIControllers.CheckShipmentReportController">
+   <items>
+      <AnchorPane id="leftPane" minWidth="214.0" prefHeight="650.0" prefWidth="214.0">
+         <children>
+            <Button id="backBtn" fx:id="backButton" layoutX="22.0" layoutY="604.0" mnemonicParsing="false" onAction="#backButton_ButtonPressed" prefHeight="34.0" prefWidth="34.0" text="&lt;" />
+            <Button id="logOutBtn" fx:id="logOut" layoutX="193.0" layoutY="602.0" mnemonicParsing="false" onAction="#logOut_ButtonPressed" prefHeight="34.0" prefWidth="86.0" text="Log out" />
+            <ImageView fx:id="logo" fitHeight="207.0" fitWidth="247.0" layoutX="15.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="160.0" fitWidth="160.0" layoutX="59.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../clientGuiAssets/EKRUTLOGONOCIRCLE.png" />
+               </image>
+            </ImageView>
+            <Text layoutX="38.0" layoutY="403.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bolder;" text="On this pagae, the CEO can view shipment reports." textAlignment="CENTER" wrappingWidth="201.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane id="rightPane" prefHeight="543.0" prefWidth="610.0">
+         <children>
+            <ComboBox fx:id="yearComboBox" layoutX="290.0" layoutY="224.0" onAction="#yearComboBoxPressed" prefHeight="34.0" prefWidth="168.0" promptText="Select Year" />
+            <ComboBox fx:id="monthComboBox" layoutX="290.0" layoutY="303.0" onAction="#monthComboBoxPressed" prefHeight="34.0" prefWidth="168.0" promptText="Select Month" />
+            <Label layoutX="157.0" layoutY="232.0" prefHeight="18.0" prefWidth="122.0" text="Select Year" />
+            <Label layoutX="152.0" layoutY="312.0" prefHeight="18.0" prefWidth="132.0" text="Select Month" />
+            <Button id="xBtn" layoutX="610.0" layoutY="14.0" mnemonicParsing="false" onAction="#x_ButtonPressed" prefHeight="34.0" prefWidth="34.0" text="X" fx:id="xButton" />
+            <Button id="bigbutton" fx:id="generateReportButton" layoutX="164.0" layoutY="439.0" mnemonicParsing="false" onAction="#generateReportButton_Pressed" prefHeight="57.0" prefWidth="301.0" styleClass="bigbutton" text="Search For Shipment Report">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Label id="headline" layoutX="128.0" layoutY="42.0" styleClass="headline" text="Shipment Report">
+               <font>
+                  <Font name="Elephant" size="13.0" />
+               </font>
+            </Label>
+            <Label id="errorLabel" fx:id="errorlabel" layoutX="197.0" layoutY="396.0" prefHeight="34.0" prefWidth="218.0" styleClass="errorLabel" text="Report Doens't Exist , Try Again!" textAlignment="CENTER" visible="false" />
+            <Label id="headline" layoutX="236.0" layoutY="107.0" styleClass="headline" text="Screen">
+               <font>
+                  <Font name="Elephant" size="13.0" />
+               </font>
+            </Label>
+            <Label id="errorLabel" fx:id="errMonth" layoutX="485.0" layoutY="303.0" prefHeight="34.0" prefWidth="168.0" styleClass="errorLabel" text="Select month" textAlignment="CENTER" visible="false" />
+            <Label id="errorLabel" fx:id="errYear" layoutX="491.0" layoutY="222.0" prefHeight="34.0" prefWidth="148.0" styleClass="errorLabel" text="Select year" textAlignment="CENTER" visible="false" />
+         </children>
+      </AnchorPane>
+   </items>
+</SplitPane>

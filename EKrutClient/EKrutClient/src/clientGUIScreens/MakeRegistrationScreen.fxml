@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<SplitPane dividerPositions="0.3" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="485.0" prefWidth="715.0" stylesheets="@../stylesSheets/generalDesign.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clientGUIControllers.MakeRegistrationController">
+   <items>
+      <AnchorPane id="leftPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <Button id="logOutBtn" fx:id="logOutBtn" layoutX="193.0" layoutY="602.0" mnemonicParsing="false" onAction="#logOutPressed" prefHeight="52.0" prefWidth="85.0" text="Log out" />
+            <Button id="backBtn" fx:id="backBtn" layoutX="22.0" layoutY="604.0" minWidth="33.0" mnemonicParsing="false" onAction="#backPressed" prefHeight="35.0" prefWidth="77.0" text="&lt;" />
+            <Label fx:id="helpLabel" alignment="TOP_LEFT" layoutX="44.0" layoutY="233.0" prefHeight="271.0" prefWidth="183.0" wrapText="true" />
+            <ImageView fx:id="logoImage" fitHeight="160.0" fitWidth="160.0" layoutX="55.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+
+      <AnchorPane id="rightPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" stylesheets="@../stylesSheets/generalDesign.css">
+         <children>
+            <Button id="xBtn" layoutX="610.0" layoutY="14.0" minHeight="19.0" minWidth="18.0" mnemonicParsing="false" onAction="#xPressed" prefHeight="19.0" prefWidth="18.0" text="X" fx:id="xBtn" />
+            <Label id="headline" alignment="CENTER" contentDisplay="CENTER" layoutX="74.0" layoutY="50.0" prefHeight="73.0" prefWidth="495.0" style="-fx-font-family: elephant; -fx-font-size: 30;" styleClass="headline" text="New registeration request" textAlignment="CENTER" />
+            <Button id="helpBtn" fx:id="helpBtn" layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onAction="#helpPressed" text="help" />
+            <ComboBox fx:id="registerationTypeCombo" layoutX="204.0" layoutY="138.0" prefHeight="30.0" prefWidth="251.0" promptText="Select Registration Type" />
+            <Label layoutX="137.0" layoutY="214.0" style="-fx-font-size: 15;" text="Enter user's username:" />
+            <Label layoutX="362.0" layoutY="214.0" style="-fx-font-size: 15;" text="Enter user's password:" />
+            <TextField fx:id="userUsername" layoutX="145.0" layoutY="245.0" promptText="Enter user's username" />
+            <TextField fx:id="userPassword" layoutX="369.0" layoutY="245.0" promptText="Enter user's password" />
+            <Button fx:id="getUserDetails" layoutX="235.0" layoutY="324.0" mnemonicParsing="false" onAction="#getUserDetailsPressed" prefHeight="36.0" prefWidth="189.0" text="Get user's Details" />
+
+
+            <Label id="errorLabel" fx:id="errorLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="153.0" layoutY="373.0" prefHeight="55.0" prefWidth="354.0" wrapText="true" />
+            <ImageView fx:id="requesticon" fitHeight="55.0" fitWidth="61.0" layoutX="60.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="regisrationReqImage" fitHeight="183.0" fitWidth="251.0" layoutX="213.0" layoutY="451.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+   </items>
+</SplitPane>

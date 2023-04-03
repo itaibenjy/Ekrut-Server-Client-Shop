@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="popUp" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="361.0" prefWidth="444.0" rotate="-0.0" style="-fx-background-radius: 30; -fx-border-color: #00ace6; -fx-border-width: 10; -fx-border-radius: 20; -fx-background-color: white;" stylesheets="@../stylesSheets/generalDesign.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clientGUIControllers.PopUpController">
+   <children>
+      <Label id="errorLabelBig" fx:id="titleLabel" alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="40.0" layoutY="12.0" prefHeight="43.0" prefWidth="340.0" style="-fx-font-family: elephant; -fx-font-size: 20;" text="Title" textAlignment="CENTER" textFill="RED" wrapText="true" />
+      <ImageView fx:id="imageView" fitHeight="65.0" fitWidth="72.0" layoutX="34.0" layoutY="245.0" pickOnBounds="true" preserveRatio="true" />
+      <ScrollPane layoutX="40.0" layoutY="50.0" prefHeight="202.0" prefWidth="383.0" style="-fx-background: transparent;">
+         <content>
+            <VBox prefHeight="200.0" prefWidth="252.0">
+               <children>
+                  <Text fx:id="messageLabel" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="358.13672256469727">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Text>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <Button layoutX="395.0" layoutY="19.0" mnemonicParsing="false" onAction="#Xpressed" stylesheets="@../stylesSheets/generalDesign.css" text="X" fx:id="xBtn" />
+      <Button fx:id="okBtn" layoutX="196.0" layoutY="296.0" mnemonicParsing="false" onAction="#okPressed" prefHeight="28.0" prefWidth="50.0" stylesheets="@../stylesSheets/generalDesign.css" text="OK" />
+   </children>
+</AnchorPane>

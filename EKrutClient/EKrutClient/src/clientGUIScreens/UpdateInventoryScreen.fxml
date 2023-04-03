@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<SplitPane dividerPositions="0.3" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../stylesSheets/generalDesign.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clientGUIControllers.UpdateInventoryController">
+   <items>
+      <AnchorPane id="leftPane" prefHeight="200.0" prefWidth="156.0">
+         <children>
+            <ImageView fx:id="logoImage" fitHeight="160.0" fitWidth="160.0" layoutX="55.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <Text fx:id="help_label" layoutX="14.0" layoutY="415.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bolder;" text="On this page, the operations worker watches on open tasks, and can perform a status update for inventory tasks in a specific facility given by the Area  manager" textAlignment="CENTER" visible="false" wrappingWidth="245.0" />
+            <Button id="logOutBtn" fx:id="LogOut" layoutX="193.0" layoutY="602.0" mnemonicParsing="false" onAction="#LogOut_Pressed" text="Log out" />
+            <Button id="backBtn" fx:id="Back_Button" layoutX="25.0" layoutY="602.0" mnemonicParsing="false" onAction="#BackButton_Pressed" text="&lt;" />
+         </children>
+      </AnchorPane>
+      <AnchorPane id="rightPane" prefHeight="398.0" prefWidth="259.0">
+         <children>
+            <Button id="xBtn" fx:id="Exit_Button" layoutX="610.0" layoutY="14.0" mnemonicParsing="false" onAction="#Exit_Pressed" prefWidth="36.0" text="X" />
+            <TableView fx:id="productTables" layoutX="84.0" layoutY="324.0" prefHeight="169.0" prefWidth="489.0" visible="false">
+              <columns>
+                  <TableColumn fx:id="ProductID" prefWidth="88.0" text="Product ID" />
+                <TableColumn fx:id="ProductName" prefWidth="104.0" text="Product Name" />
+                <TableColumn fx:id="oldInventory" prefWidth="100.0" text="Old Inventory" />
+                  <TableColumn fx:id="newInventory" prefWidth="112.0" text="New Inventory" />
+                  <TableColumn fx:id="checkboxStatus" text="Done" />
+              </columns>
+            </TableView>
+            <TableView fx:id="tasksTable" layoutX="44.0" layoutY="129.0" prefHeight="99.0" prefWidth="272.0">
+              <columns>
+                <TableColumn fx:id="idExecutionInstruction" prefWidth="105.0" text="Task ID" />
+                <TableColumn fx:id="facilityId" prefWidth="165.0" text="Faclitity Name" />
+              </columns>
+            </TableView>
+            <Button fx:id="UpdateTask" layoutX="486.0" layoutY="518.0" mnemonicParsing="false" onAction="#UpdateTask_Pressed" text="Update" visible="false" />
+            <Label layoutX="44.0" layoutY="98.0" text="Open tasks:" />
+            <Label fx:id="welcomeToOperatingWorkerLabel" layoutX="174.0" layoutY="33.0" prefHeight="62.0" prefWidth="323.0" styleClass="headline" text="Inventory update" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="7.0" />
+               </font></Label>
+            <Label fx:id="prodactsLabel" layoutX="44.0" layoutY="266.0" text="Products in task and the status:" />
+            <Button fx:id="UpdateAll" layoutX="85.0" layoutY="518.0" mnemonicParsing="false" onAction="#UpdateAllTasks_Pressed" text="Update All" visible="false" />
+            <Button fx:id="Show_Button" layoutX="517.0" layoutY="228.0" mnemonicParsing="false" onAction="#ShowButton_Pressed" text="Show" />
+            <Label id="errorLabel" fx:id="ErorMessage" layoutX="325.0" layoutY="179.0" text="You need to select task!" textFill="RED" visible="false" />
+            <Label id="noOpenMissions" fx:id="OpenTasksLabel" layoutX="166.0" layoutY="98.0" text="There are no open tasks" textFill="#0021dd" visible="false">
+               <font>
+                  <Font size="9.0" />
+               </font>
+            </Label>
+            <Label id="errorLabel" fx:id="selectLabel" layoutX="302.0" layoutY="525.0" text="need to select 1 product at least" visible="false" />
+            <Button id="helpBtn" fx:id="help_button" layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onAction="#helpButton_Pressed" text="Help" />
+         </children>
+      </AnchorPane>
+   </items>
+</SplitPane>

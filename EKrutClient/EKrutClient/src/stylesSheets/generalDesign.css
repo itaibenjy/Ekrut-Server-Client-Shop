@@ -1,0 +1,561 @@
+
+.split-pane {
+     -fx-pref-Width: 950.0;
+    -fx-pref-Height: 650.0;
+    -fx-background-color: #edf2f4;
+    -fx-layout-x: 224.0;
+    -fx-lyout-y: -1.0;
+}
+
+#Report{
+   -fx-background-color: linear-gradient(from 25.0px 25.0px to 100.0px 100.0px,#40E0D0,#00ace6,#ffffff);
+   
+}
+#Connect{
+   -fx-background-color: linear-gradient(to bottom,#00ace6, #3accdf,#40E0D0,#ffffff );
+   
+}
+#thisPage{
+	   
+     -fx-effect: dropshadow(gaussian, rgba(0.0, 0.0, 0.0, 0.3), 10.0, 0.5, 0.0, 0.0);
+
+    /*border*/
+    -fx-border-radius: 30.0px;
+    -fx-border-color: black;
+    -fx-border-width: 3.0px;
+    /*text*/
+    -fx-text-fill: black;
+    -fx-font-size: 7.5px;
+    -fx-font-weight: regular;
+    -fx-font-family: system; /*Gill Sans*/
+    -fx-justify-content: center;
+    /*background*/
+    
+       /*-fx-background-color: linear-gradient(from 25.0% 25.0% to 100.0% 100.0%,#3accdf,#00ace6 ,#00ace6,#00ace6,#00ace6,#00ace6,#3accdf,#3accdf);*/
+  /*  -fx-background-color: radial-gradient(focus-angle 45deg , focus-distance 20% , center 25% 25% , radius 50% , reflect, #00ace6, #3accdf 75% , #3accdf);*/
+	   -fx-background-color: linear-gradient(to bottom,#00ace6, #3accdf,#40E0D0,#ffffff );
+
+    -fx-background-radius: 30.0px;
+    /*other*/
+    -fx-height: 8.0px;
+    -fx-align-items: center;
+    -fx-cursor: pointer;
+    -fx-Pref-Height:30.0;
+    
+	
+}
+#otherPage{
+	   -fx-effect: dropshadow(gaussian, rgba(0.0, 0.0, 0.0, 0.3), 10.0, 0.5, 0.0, 0.0);
+
+    /*border*/
+    -fx-border-radius: 30.0px;
+    -fx-border-color: black;
+    -fx-border-width: 1.0px;
+    /*text*/
+    -fx-text-fill: black;
+    -fx-font-size: 7.5px;
+    -fx-font-weight: regular;
+    -fx-font-family: system; /*Gill Sans*/
+    -fx-justify-content: center;
+    /*background*/
+	   -fx-background-color: white;
+	   
+    -fx-background-radius: 30.0px;
+    /*other*/
+    -fx-height: 8.0px;
+    -fx-align-items: center;
+    -fx-cursor: pointer;
+    -fx-Pref-Height:30.0;
+	
+}
+#errorLabelBen {
+    /*text*/
+    -fx-text-fill: rgb(234.0, 29.0, 29.0);
+    -fx-font-weight: bolder;
+    -fx-font-family: sans-serif; /*Gill Sans*/
+    -fx-font-size: 120.0%;
+    -fx-style: normal;
+    -fx-font-variant: common-ligatures tabular-nums;
+    -fx-justify-content: center;
+}
+
+
+#LabelBen {
+    /*text*/
+    -fx-text-fill: rgb(40.0, 202.0, 213.0);
+    -fx-font-weight: bolder;
+    -fx-font-family: sans-serif; /*Gill Sans*/
+    -fx-font-size: 120.0%;
+    -fx-style: normal;
+    -fx-font-variant: common-ligatures tabular-nums;
+    -fx-justify-content: center;
+}
+
+#cartLabel{
+	-fx-font-size: 11.0;
+	-fx-style: normal;
+	-fx-font-weight:100.0;
+	 -fx-font-family:arial;
+
+
+}
+
+
+.button{
+
+     -fx-effect: dropshadow(gaussian, rgba(0.0, 0.0, 0.0, 0.3), 10.0, 0.5, 0.0, 0.0);
+
+    /*border*/
+    -fx-border-radius: 20.0px;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 2.0px;
+    /*text*/
+    -fx-text-fill: white;
+    -fx-font-size: 15.0px;
+    -fx-font-weight: bolder;
+    -fx-font-family: sans-serif; /*Gill Sans*/
+    -fx-font-size: 100.0%;
+    -fx-style: normal;
+    -fx-font-variant: common-ligatures tabular-nums;
+    -fx-justify-content: center;
+    /*background*/
+    
+       /*-fx-background-color: linear-gradient(from 25.0% 25.0% to 100.0% 100.0%,#3accdf,#00ace6 ,#00ace6,#00ace6,#00ace6,#00ace6,#3accdf,#3accdf);*/
+  /*  -fx-background-color: radial-gradient(focus-angle 45deg , focus-distance 20% , center 25% 25% , radius 50% , reflect, #00ace6, #3accdf 75% , #3accdf);*/
+       -fx-background-color: radial-gradient(center 50.0% 50.0% , radius 90.0% , #00ace6,#a7dff1);
+
+    -fx-background-radius: 20.0px;
+    /*other*/
+    -fx-height: 10.0px;
+    -fx-flex: 1.0 30.0px;
+    -fx-align-items: center;
+    -fx-cursor: pointer;
+    -fx-Pref-Height:35.0;
+
+    
+}
+/* Start Table View style */
+.table-view {
+    -fx-background-color: transparent;
+}
+.table-view .text {
+       -fx-fill: black ;
+}
+     
+.table-view .column-header-background .filler {
+    -fx-background-color: transparent;
+}
+.table-view .corner {
+    -fx-background-color: transparent;
+}
+/* header colorers */
+.table-view .column-header-background{
+    -fx-background-color: linear-gradient(to bottom, #00ace6, #B9D9EB);
+    -fx-background-radius: 7.0px 7.0px 0.0px 0.0px;
+    -fx-background-insets: 0.0 0.0px 0.0 0.0;
+    -fx-padding: 0.0 0.0 5.0px 0.0;
+}
+.table-view .column-header {
+    -fx-background-color: transparent;
+}
+
+/* Cells and Rows */
+.table-view .table-cell{
+	-fx-border-width: 2;
+    -fx-padding: 2.0 0.0 2.0 10.0px;
+}
+.table-row-cell:hover {
+    -fx-background-color: #e6faff;
+    -fx-text-background-color: #1a75ff;
+}
+.table-row-cell:odd{
+    -fx-background-color: #F0F8FF;
+    -fx-background-insets: 0.0, 0.0 0.0 1.0 0.0;
+    -fx-padding: 0.0em;
+}
+.table-row-cell:even{
+    -fx-background-color: #EBFCFF;
+    -fx-background-insets: 0.0, 0.0 0.0 1.0 0.0;
+    -fx-padding: 0.0em;
+}
+
+ .table-row-cell {
+    -fx-cell-size: 35.0px;
+}
+
+/* Scroll bars */
+.table-view .virtual-flow .scroll-bar:vertical,
+.table-view .virtual-flow .scroll-bar:vertical .track,
+.table-view .virtual-flow .scroll-bar:vertical .track-background,
+.table-view .virtual-flow .scroll-bar:horizontal,
+.table-view .virtual-flow .scroll-bar:horizontal .track,
+.table-view .virtual-flow .scroll-bar:horizontal .track-background {
+    -fx-background-color: transparent;
+}
+.table-view .virtual-flow .scroll-bar .increment-button,
+.table-view .virtual-flow .scroll-bar .decrement-button {
+    -fx-opacity: 0.0;
+    -fx-padding: 2.0;
+    }
+    .table-view .virtual-flow .scroll-bar:vertical .thumb{
+    -fx-background-color:  linear-gradient(to bottom, #1dbbdd44,  #ccf5ff);
+}
+.table-view .virtual-flow .scroll-bar:horizontal .thumb {
+    -fx-background-color:  linear-gradient(to right, #1dbbdd44,  #ccf5ff);
+}
+     
+.table-row-cell:selected {
+	-fx-background-color: #cccccc ;
+}   
+
+.table-row-cell:selected .text {
+       -fx-fill: black ;
+       -fx-font-weight: bolder;
+
+}
+         
+/* End Table View style */
+
+#bigbutton {
+    -fx-effect: dropshadow(gaussian, rgba(0.0, 0.0, 0.0, 0.3), 10.0, 0.5, 0.0, 0.0);
+    /*border*/
+    -fx-border-radius: 20.0px;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 2.0px;
+    /*text*/
+    -fx-text-fill: white;
+    -fx-font-size: 30.0px;
+    -fx-font-weight: bolder;
+    -fx-font-family: sans-serif; /*Gill Sans*/
+    -fx-font-size: 130.0%;
+    -fx-style: normal;
+    -fx-font-variant: common-ligatures tabular-nums;
+    -fx-justify-content: center;
+    /*background*/
+    
+       -fx-background-color: radial-gradient(center 50.0% 50.0% , radius 100.0% , #00ace6,#a7dff1);
+    
+ /*   -fx-background-color: radial-gradient(focus-angle 45deg , focus-distance 20% , center 25% 25% , radius 50% , reflect, #00ace6, #3accdf 75% , #3accdf);*/
+    -fx-background-radius: 20.0px;
+    /*other*/
+    -fx-height: 10.0px;
+    -fx-flex: 1.0 30.0px;
+    -fx-align-items: center;
+    -fx-cursor: pointer;
+}
+/* Add a hover effect for buttons */
+/*hover selector to change the style of the button when you move the mouse over it.*/
+
+.button:hover {
+    
+    -fx-color: #cde3f0e8;
+    -fx-transition-duration: 5.0s;
+    -fx-opacity: 0.7;
+    -fx-cursor: pointer;
+   
+  }
+
+
+.label {
+    -fx-text-fill: black;
+    -fx-font-weight: bolder;
+    -fx-font-size: 120.0%;
+    -fx-style: normal;
+    -fx-font-variant: common-ligatures tabular-nums;
+    -fx-justify-content: center;
+
+}
+
+.headline {
+    -fx-text-fill: black;
+    -fx-font-weight: bolder;
+    -fx-font-family: elephant; /*Gill Sans*/
+    -fx-font-size: 300.0%;
+    -fx-style: normal;
+    -fx-font-variant: elephant;
+    -fx-justify-content: center;
+   
+}
+
+.text-field {
+    /*border*/
+    -fx-background-radius: 20.0px;
+    -fx-border-radius: 20.0px;
+    -fx-border-color: #00ace6;
+    -fx-border-width: 2.0px;
+   
+}
+
+#smallHead{
+
+	  -fx-font-size: 130.0%;
+	 -fx-text-fill: #00ace6;
+	  -fx-font-weight: bolder;
+}
+
+
+/*split pane --> AnchorPane , Anchor pane*/
+
+/*Partition location*/
+.split-pane:horizontal {
+    -fx-divider-positions: 0.3183;
+}
+
+/*That the partition be transparent*/
+
+
+/*Left pane design--> AnchorPane --> id=leftPane*/
+#leftPane {
+    -fx-pref-Width: 237.0;
+    -fx-pref-Height: 503.0;
+    -fx-max-width:290.0;
+    -fx-min-width:290.0;
+    -fx-display: flex;
+    -fx-justify-content: center;
+    -fx-align-items: center;
+  
+   /*-fx-background-color: linear-gradient(from 25.0% 25.0% to 100.0% 100.0%,#00ace6, #50E0D0,#ffffff );*/
+   -fx-background-color: linear-gradient(from 25.0% 25.0% to 100.0% 100.0%,#00ace6, #3accdf,#bddbda );
+
+   
+}
+
+
+/*Right pane design--> AnchorPane --> id=rightPane*/
+#rightPane {
+    -fx-pref-Width: 511.0;
+    -fx-pref-Height: 503.0;
+    -fx-display: flex;
+    -fx-justify-content: center;
+    -fx-align-items: center;
+
+    -fx-background-color: linear-gradient(to top left ,#3accdf,#ffffff,#ffffff,#ffffff,#ffffff,#ffffff,#ffffff,#ffffff,#ffffff, #ffffff,#ffffff,#ffffff);
+}
+
+#logOut{
+  -fx-Width:71.0;
+  -fx-height:29.0;
+  -fx-LayoutX:139.0;
+  -fx-LayoutY:461.0;
+  
+     -fx-effect: dropshadow(gaussian, rgba(0.0, 0.0, 0.0, 0.3), 10.0, 0.5, 0.0, 0.0);
+    /*border*/
+    -fx-border-radius: 20.0px;
+    -fx-border-color: #ffffff;
+    -fx-border-width: 2.0px;
+    /*text*/
+    -fx-text-fill: white;
+    -fx-font-size: 15.0px;
+    -fx-font-weight: bolder;
+    -fx-font-family: sans-serif; /*Gill Sans*/
+    -fx-font-size: 100.0%;
+    -fx-style: normal;
+    -fx-font-variant: common-ligatures tabular-nums;
+    -fx-justify-content: center;
+    /*background*/
+       -fx-background-color: radial-gradient(center 50.0% 50.0% , radius 100.0% , #00ace6,#a7dff1);
+    -fx-background-radius: 20.0px;
+    /*other*/
+    -fx-height: 10.0px;
+    -fx-flex: 1.0 30.0px;
+    -fx-align-items: center;
+    -fx-cursor: pointer;
+  
+}
+
+#logOut:hover {
+    
+    -fx-color: #cde3f0e8;
+    -fx-transition-duration: 5.0s;
+    -fx-opacity: 0.7;
+    -fx-cursor: pointer;
+}
+/*Left pane design--> Hbox --> id=leftPane*/
+#scrollPane {
+    -fx-display: flex;
+    -fx-justify-content: center;
+    -fx-align-items: center;
+    -fx-background-color: #00ace6;
+}
+
+/*Logo design--> image view--> id=logo*/
+#logo {
+    -fx-size-fit-width: 200.0;
+    -fx-size-fit-height: 200.0;
+    -fx-layout-x: 13.0;
+    -fx-layout-y: 0.0;
+    -fx-background-image: url("../clientGuiAssets/EKRUTLOGONOCIRCLE.png");
+}
+
+
+#returnButton {
+    -fx-pref-width: 41.0px;
+    -fx-pref-height: 37.0px;
+    -fx-layout-x: 0.0;
+    -fx-layout-y: 466.0;
+    /*-fx-background-color:#00ace6*/
+    -fx-background-radius: 10000.0px;
+    /*border*/
+    -fx-border-radius: 20.0px;
+       -fx-background-color: radial-gradient(center 50.0% 50.0% , radius 100.0% , #00ace6,#a7dff1);
+    -fx-border-width: 2.0px;
+    -fx-graphic: url("../../clientGuiAssets/returnButton.png");
+}
+
+#errorLabel {
+    /*text*/
+    -fx-text-fill: rgb(234.0, 29.0, 29.0);
+    -fx-font-weight: bolder;
+    -fx-font-family: sans-serif; /*Gill Sans*/
+    -fx-font-size: 90.0%;
+    -fx-style: normal;
+    -fx-font-variant: common-ligatures tabular-nums;
+    -fx-justify-content: center;
+}
+#errorLabelBig {
+    /*text*/
+    -fx-text-fill: rgb(234.0, 29.0, 29.0);
+    -fx-font-weight: bolder;
+    -fx-font-family: sans-serif; /*Gill Sans*/
+    -fx-font-size: 120.0%;
+    -fx-style: normal;
+    -fx-font-variant: common-ligatures tabular-nums;
+    -fx-justify-content: center;
+}
+#infoLabel {
+    /*text*/
+    -fx-text-fill: rgb(233.0, 227.0, 227.0);
+    -fx-font-weight: bolder;
+    -fx-font-family: sans-serif; /*Gill Sans*/
+    -fx-font-size: 130.0%;
+    -fx-style: normal;
+    -fx-font-variant: common-ligatures tabular-nums;
+    -fx-justify-content: center;
+}
+.combo-box {
+    -fx-border-radius: 20.0px;
+    -fx-background-radius: 20.0px;
+    -fx-background-color: #F5F5F5;
+    -fx-border-color: #00ace6;
+    -fx-justify-content: center;
+    -fx-align-items: center;
+    -fx-font-weight: bolder;
+    -fx-effect: dropshadow(gaussian, rgba(0.0, 0.0, 0.0, 0.3), 10.0, 0.5, 0.0, 0.0);
+}
+
+#confirmaction {
+    -fx-text-fill: rgb(0.0, 164.0, 29.0);
+    -fx-font-weight: bolder;
+    -fx-font-family: sans-serif;
+    -fx-font-size: 90.0%;
+    -fx-style: normal;
+    -fx-font-variant: common-ligatures tabular-nums;
+    -fx-justify-content: center;
+}
+
+/*Left pane design--> Hbox --> id=leftPane*/
+#scrollPane {
+    -fx-display: flex;
+    -fx-justify-content: center;
+    -fx-align-items: center;
+    -fx-background-color: #00ace6;
+}
+
+
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background-radius: 10.0px;
+}
+
+
+.scroll-bar:horizontal, .scroll-bar:vertical {
+    -fx-background-color: #C2C9CB;
+}
+
+    .scroll-bar:horizontal .thumb,
+    .scroll-bar:vertical .thumb {
+        -fx-background-color: white;
+        -fx-background-radius: 5.0em;
+    }
+
+.scroll-pane > .corner {
+    -fx-background-color: transparent;
+}
+
+     
+#confirmaction {
+
+     
+     -fx-text-fill: rgb(0.0, 164.0, 29.0);
+     -fx-font-weight: bolder;
+     -fx-font-family: sans-serif; 
+     -fx-font-size:90.0%;
+     -fx-style:normal;
+     -fx-font-variant: common-ligatures tabular-nums;
+     -fx-justify-content:center;
+
+}
+#cartPlusMinus{
+	  -fx-font-size: 200.0%;
+    -fx-text-fill: MidnightBlue;
+    -fx-font-weight: bolder;
+    -fx-font-family: sans-serif; /*Gill Sans*/
+  
+    -fx-style: normal;
+    -fx-font-variant: common-ligatures tabular-nums;
+    -fx-justify-content: center;
+}
+#smallHead{
+
+	  -fx-font-size: 130.0%;
+	 -fx-text-fill: #00ace6;
+	  -fx-font-weight: bolder;
+	 
+}
+#smallLabel{
+	-fx-font-size:85.0%;
+	 -fx-font-weight: bolder;
+	
+	}
+#xBtn{
+	-fx-pref-height: 30.0px;
+    -fx-pref-width: 30.0px;	
+	}
+#backBtn{
+	-fx-pref-height: 30.0px;
+    -fx-pref-width: 30.0px;	
+	}
+#helpBtn{
+	-fx-pref-height: 35.0px;
+    -fx-pref-width: 48.0px;	
+	}
+#logOutBtn{
+	-fx-pref-height: 35.0px;
+    -fx-pref-width: 65.0px;
+    -fx-translate-x: 25.0;
+    -fx-translate-y: 0.0;
+	}
+#LabelActive {
+    /*text*/
+    -fx-text-fill: rgb(22.0, 107.0, 19.0);
+    -fx-font-weight: bolder;
+    -fx-font-family: sans-serif; /*Gill Sans*/
+    -fx-font-size: 120.0%;
+    -fx-style: normal;
+    -fx-font-variant: common-ligatures tabular-nums;
+    -fx-justify-content: center;
+}
+#LabelNoActive {
+    /*text*/
+    -fx-text-fill: rgb(230, 0, 0);
+    -fx-font-weight: bolder;
+    -fx-font-family: sans-serif; /*Gill Sans*/
+    -fx-font-size: 120.0%;
+    -fx-style: normal;
+    -fx-font-variant: common-ligatures tabular-nums;
+    -fx-justify-content: center;
+}
+
+.split-pane > .split-pane-divider {
+	    -fx-background-color: white;
+	}

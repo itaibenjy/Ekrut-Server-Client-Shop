@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="shipmentPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="351.0" prefWidth="551.0" style="-fx-background-color: #F0F0F0; -fx-background-radius: 20px;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clientGUIControllers.ShipmentDetailsController">
+   <children>
+      <Label layoutX="207.0" layoutY="68.0" stylesheets="@../stylesSheets/generalDesign.css" text="Enter shipment address:" textAlignment="CENTER" />
+      <Label layoutX="85.0" layoutY="186.0" stylesheets="@../stylesSheets/generalDesign.css" text="City:" />
+      <Label layoutX="226.0" layoutY="186.0" stylesheets="@../stylesSheets/generalDesign.css" text="Street:" />
+      <Label layoutX="371.0" layoutY="186.0" stylesheets="@../stylesSheets/generalDesign.css" text="House number:" />
+      <TextField fx:id="streetTextField" layoutX="226.0" layoutY="215.0" prefHeight="30.0" prefWidth="117.0" promptText="Enter Street" stylesheets="@../stylesSheets/generalDesign.css" />
+      <TextField fx:id="houseNumTextField" layoutX="371.0" layoutY="215.0" prefHeight="35.0" prefWidth="117.0" promptText="Enter number" stylesheets="@../stylesSheets/generalDesign.css" />
+      <Label layoutX="224.0" layoutY="25.0" style="-fx-font-size: 200%; -fx-font-family: elephant;" stylesheets="@../stylesSheets/generalDesign.css" text="Shipment" underline="true" />
+      <TextField fx:id="cityTextField" layoutX="85.0" layoutY="215.0" prefHeight="30.0" prefWidth="117.0" promptText="Enter city" stylesheets="@../stylesSheets/generalDesign.css" />
+      <Label layoutX="196.0" layoutY="56.0" prefHeight="44.0" prefWidth="54.0" style="-fx-text-fill: red; -fx-font-size: 200%;" stylesheets="@../stylesSheets/generalDesign.css" text="*" />
+      <Label id="errorLabel" fx:id="errorLabel" contentDisplay="CENTER" layoutX="85.0" layoutY="269.0" prefHeight="68.0" prefWidth="402.0" stylesheets="@../stylesSheets/generalDesign.css" textAlignment="CENTER" wrapText="true" />
+      <ComboBox fx:id="countryCombo" layoutX="223.0" layoutY="135.0" prefHeight="35.0" prefWidth="170.0" promptText="Select Country" stylesheets="@../stylesSheets/generalDesign.css" />
+      <Label layoutX="223.0" layoutY="104.0" stylesheets="@../stylesSheets/generalDesign.css" text="Country :" />
+   </children>
+</AnchorPane>

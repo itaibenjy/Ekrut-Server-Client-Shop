@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.StackPane?>
+
+<StackPane fx:id="stack" onMouseClicked="#addToCartClicked" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clientGUIControllers.ProductCartViewController">
+   <children>
+      <ImageView fx:id="addToCart" fitHeight="50.0" fitWidth="49.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@/myOrderScreenPic/add-to-cart.png" />
+         </image>
+      </ImageView>
+      <Label id="errorLabel" fx:id="lastProduct" />
+   </children>
+</StackPane>

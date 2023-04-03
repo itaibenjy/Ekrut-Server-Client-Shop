@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<SplitPane dividerPositions="0.3" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../stylesSheets/generalDesign.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clientGUIControllers.AreaManagerController">
+   <items>
+    <AnchorPane id="leftPane" maxHeight="1.7976931348623157E308" maxWidth="283" minHeight="398.0" minWidth="283" prefHeight="398.0" prefWidth="189.0">
+         <children>
+            <ImageView fx:id="logoImage" fitHeight="160.0" fitWidth="160.0" layoutX="55.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <Button id="logOutBtn" fx:id="logOut" layoutX="193.0" layoutY="602.0" mnemonicParsing="false" onAction="#logOut_ButtonPressed" prefHeight="42.0" prefWidth="90.0" text="Log out" />
+            <AnchorPane fx:id="info" layoutX="12.0" layoutY="313.0" prefHeight="130.0" prefWidth="262.0" visible="false">
+               <children>
+                  <VBox layoutX="14.0" prefHeight="130.0" prefWidth="92.0">
+                     <children>
+                        <Label text="First name:" underline="true" />
+                        <Label text="Last name:" underline="true" />
+                        <Label text="Email:" underline="true" />
+                        <Label text="phone:" underline="true" />
+                        <Label text="User Status:" underline="true" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="130.0" layoutY="1.0" prefHeight="130.0" prefWidth="136.0">
+                     <children>
+                        <Label fx:id="Fname" text="Fname" />
+                        <Label fx:id="Lname" text="Lname" />
+                        <Label fx:id="Email" text="Email" />
+                        <Label fx:id="phone" text="phone" />
+                        <Label fx:id="userStatus" text="userStatus" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <Button fx:id="infoBtn" layoutX="73.0" layoutY="249.0" mnemonicParsing="false" onAction="#infoBtn_Pressed" text="Show user Deatils" />
+         </children>
+      </AnchorPane>
+      <AnchorPane id="rightPane" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Button id="bigbutton" fx:id="defineTresholdLevelButton" layoutX="180.0" layoutY="352.0" mnemonicParsing="false" onAction="#defineTresholdLevelButton_Pressed" prefHeight="35.0" prefWidth="344.0" styleClass="bigbutton" text="DefineTreshold Level" textAlignment="CENTER" />
+            <Button id="bigbutton" fx:id="viewReportsButton" layoutX="180.0" layoutY="215.0" mnemonicParsing="false" onAction="#viewReportsButton_Pressed" prefHeight="34.0" prefWidth="338.0" styleClass="bigbutton" text="View Reports" />
+            <Button id="xBtn" layoutX="614.0" layoutY="14.0" mnemonicParsing="false" onAction="#x_ButtonPressed" prefHeight="42.0" prefWidth="44.0" text="X" fx:id="x_Button" />
+            <Button id="bigbutton" fx:id="ConfirmRegistrationRequestButton" layoutX="180.0" layoutY="417.0" mnemonicParsing="false" onAction="#ConfirmRegistrationRequestButton_ButtonPressed" prefHeight="35.0" prefWidth="344.0" style="-fx-label-padding: black;" styleClass="bigbutton" text="Confirm Registration Request" />
+            <Button id="bigbutton" fx:id="viewUpdatedFacilityInventory" layoutX="180.0" layoutY="283.0" mnemonicParsing="false" onAction="#viewUpdatedFacilityInventory_ButtonPressed" prefHeight="46.0" prefWidth="338.0" styleClass="bigbutton" text="View Updated Facility Inventory" />
+            <Button id="bigbutton" fx:id="transferExecutionInsturctions" layoutX="180.0" layoutY="480.0" mnemonicParsing="false" onAction="#transferExecutionInsturctions_ButtonPressed" prefHeight="28.0" prefWidth="338.0" styleClass="bigbutton" text="Transfer Execution Insturctions" />
+            <Label fx:id="welcomeToAreaManagerLabel" layoutX="201.0" layoutY="118.0" prefHeight="26.0" prefWidth="270.0" />
+            <Label alignment="CENTER" centerShape="false" layoutX="139.0" layoutY="61.0" styleClass="headline" text="Hello Area Manager" textOverrun="CLIP" />
+            <Button id="bigbutton" fx:id="additionalPermissionBtn" layoutX="180.0" layoutY="550.0" mnemonicParsing="false" onAction="#additionalPermissionPressed" prefHeight="28.0" prefWidth="338.0" styleClass="bigbutton" text="subscriber or registered" />
+            <ImageView fx:id="areaPhoto" fitHeight="39.0" fitWidth="50.0" layoutX="219.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true" />
+            <Label layoutX="276.0" layoutY="156.0" prefHeight="22.0" prefWidth="59.0" text="Area:" underline="true" />
+            <Label fx:id="areaLabel" layoutX="335.0" layoutY="156.0" prefHeight="22.0" prefWidth="105.0" text="Label" />
+            <ImageView fx:id="viewReportImage" fitHeight="39.0" fitWidth="50.0" layoutX="98.0" layoutY="212.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="inventoryImage" fitHeight="39.0" fitWidth="50.0" layoutX="98.0" layoutY="280.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="tresholdImage" fitHeight="39.0" fitWidth="50.0" layoutX="98.0" layoutY="349.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="confirmImage" fitHeight="39.0" fitWidth="50.0" layoutX="98.0" layoutY="417.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../location.png" />
+               </image></ImageView>
+            <ImageView fx:id="instructionImage" fitHeight="39.0" fitWidth="50.0" layoutX="98.0" layoutY="477.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="orderImage" fitHeight="39.0" fitWidth="50.0" layoutX="98.0" layoutY="547.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fitHeight="39.0" fitWidth="37.0" layoutX="85.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/homeScreenPic/home.gif" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </items>
+</SplitPane>

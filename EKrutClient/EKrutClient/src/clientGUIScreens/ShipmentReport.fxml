@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<SplitPane dividerPositions="0.3" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../stylesSheets/generalDesign.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clientGUIControllers.CheckShipmentReportController">
+   <items>
+      <AnchorPane id="leftPane" prefHeight="648.0" prefWidth="246.0" stylesheets="@../../../../../OneDrive%20-%20ort%20braude%20college%20of%20engineering/MiniProjectEKRUT/generalDesign.css">
+         <children>
+            <Button id="backBtn" fx:id="backButton" layoutX="22.0" layoutY="604.0" mnemonicParsing="false" onAction="#backButton_ButtonPressed" prefHeight="29.0" prefWidth="28.0" text="&lt;" />
+            <Button id="logOutBtn" fx:id="logOut" layoutX="173.0" layoutY="602.0" mnemonicParsing="false" onAction="#logOut_ButtonPressed" prefHeight="40.0" prefWidth="85.0" text="Log out" />
+            <ImageView fx:id="logo" fitHeight="160.0" fitWidth="160.0" layoutX="55.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <Text layoutX="63.0" layoutY="432.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bolder;" text="On this pagae, the CEO can view shipment reports." textAlignment="CENTER" wrappingWidth="152.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane id="rightPane" prefHeight="648.0" prefWidth="689.0" stylesheets="@../../../../../OneDrive%20-%20ort%20braude%20college%20of%20engineering/MiniProjectEKRUT/generalDesign.css">
+         <children>
+            <ComboBox fx:id="yearComboBox" layoutX="277.0" layoutY="223.0" onAction="#yearComboBoxPressed" prefHeight="34.0" prefWidth="168.0" promptText="Select Year" />
+            <ComboBox fx:id="monthComboBox" layoutX="277.0" layoutY="295.0" onAction="#monthComboBoxPressed" prefHeight="34.0" prefWidth="168.0" promptText="Select Month" />
+            <Label layoutX="139.0" layoutY="230.0" prefHeight="18.0" prefWidth="122.0" text="Select Year" />
+            <Label layoutX="134.0" layoutY="298.0" prefHeight="18.0" prefWidth="132.0" text="Select Month" />
+            <Button id="xBtn" layoutX="610.0" layoutY="14.0" mnemonicParsing="false" onAction="#x_ButtonPressed" prefHeight="34.0" prefWidth="34.0" text="X" fx:id="xButton" />
+            <Button id="bigbutton" fx:id="generateReportButton" layoutX="168.0" layoutY="448.0" mnemonicParsing="false" onAction="#generateReportButton_Pressed" prefHeight="34.0" prefWidth="294.0" styleClass="bigbutton" text="Search For Shipment Report">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Label id="headline" layoutX="152.0" layoutY="50.0" styleClass="headline" text="Shipment Report">
+               <font>
+                  <Font name="Elephant" size="13.0" />
+               </font>
+            </Label>
+            <Label id="errorLabel" fx:id="errorlabel" layoutX="197.0" layoutY="396.0" prefHeight="34.0" prefWidth="218.0" styleClass="errorLabel" text="Report Doens't Exist , Try Again!" textAlignment="CENTER" visible="false" />
+            <Label id="errorLabel" fx:id="errMonth" layoutX="456.0" layoutY="304.0" prefHeight="34.0" prefWidth="175.0" styleClass="errorLabel" text="Select month" textAlignment="CENTER" visible="false" />
+            <Label id="errorLabel" fx:id="errYear" layoutX="462.0" layoutY="223.0" prefHeight="34.0" prefWidth="152.0" styleClass="errorLabel" text="Select year" textAlignment="CENTER" visible="false" />
+            <ImageView fx:id="droneImage" fitHeight="89.0" fitWidth="93.0" layoutX="63.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/clientGuiAssets/viewCatalogScreenPic/drone.gif" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </items>
+</SplitPane>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.3" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="485.0" prefWidth="715.0" stylesheets="@../stylesSheets/generalDesign.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clientGUIControllers.SubscriberController">
+  <items>
+    <AnchorPane id="leftPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <ImageView id="logo" fitHeight="160.0" fitWidth="160.0" layoutX="55.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/EKRUTLOGONOCIRCLE.png" />
+               </image>
+            </ImageView>
+            <Button id="logOutBtn" fx:id="logOutBtn" layoutX="193.0" layoutY="602.0" mnemonicParsing="false" onAction="#logOutPressed" text="Log out" />
+            <Button id="backBtn" fx:id="backBtn" layoutX="22.0" layoutY="604.0" mnemonicParsing="false" onAction="#backPressed" text="&lt;" />
+            <AnchorPane fx:id="info" layoutX="12.0" layoutY="313.0" prefHeight="130.0" prefWidth="262.0" visible="false">
+               <children>
+                  <VBox layoutX="14.0" prefHeight="130.0" prefWidth="92.0">
+                     <children>
+                        <Label text="First name:" underline="true" />
+                        <Label text="Last name:" underline="true" />
+                        <Label text="Email:" underline="true" />
+                        <Label text="phone:" underline="true" />
+                        <Label text="User Status:" underline="true" />
+                     </children>
+                  </VBox>
+                  <VBox layoutX="130.0" layoutY="1.0" prefHeight="130.0" prefWidth="136.0">
+                     <children>
+                        <Label fx:id="Fname" text="Fname" />
+                        <Label fx:id="Lname" text="Lname" />
+                        <Label fx:id="Email" text="Email" />
+                        <Label fx:id="phone" text="phone" />
+                        <Label fx:id="userStatus" text="userStatus" />
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <Button fx:id="infoBtn" layoutX="73.0" layoutY="249.0" mnemonicParsing="false" onAction="#infoBtn_Pressed" text="Show user Deatils" />
+         </children></AnchorPane>
+    <AnchorPane id="rightPane" minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" stylesheets="@../stylesSheets/generalDesign.css">
+         <children>
+            <Label fx:id="welcomeBackLabel" contentDisplay="CENTER" layoutX="164.0" layoutY="90.0" prefHeight="48.0" prefWidth="297.0" style="-fx-font-family: elephant;" styleClass="textlabel" textAlignment="CENTER">
+               <font>
+                  <Font size="96.0" />
+               </font>
+            </Label>
+            <Button id="bigbutton" fx:id="makeAnOrderBtn" layoutX="179.0" layoutY="185.0" mnemonicParsing="false" onAction="#makeAnOrderPressed" prefHeight="27.0" prefWidth="278.0" text="Make An Order" />
+            <Button id="bigbutton" fx:id="manageMyOrderBtn" layoutX="179.0" layoutY="235.0" mnemonicParsing="false" onAction="#manageMyOrderPressed" prefHeight="27.0" prefWidth="278.0" text="Manage my orders" />
+            <Button id="bigbutton" fx:id="viewcatalogBtn" layoutX="179.0" layoutY="285.0" mnemonicParsing="false" onAction="#viewCatalogPressed" prefHeight="27.0" prefWidth="278.0" text="View catalog" />
+            <Button id="bigbutton" fx:id="pickUpMyOrderBtn" layoutX="179.0" layoutY="335.0" mnemonicParsing="false" onAction="#pickUpMyOrderPressed" prefHeight="48.0" prefWidth="278.0" text="Pick Up my order" />
+            <Button id="xBtn" layoutX="610.0" layoutY="14.0" mnemonicParsing="false" onAction="#xPressed" text="X" fx:id="xBtn" />
+            <Label id="headline" layoutX="218.0" layoutY="31.0" prefHeight="57.0" prefWidth="216.0" styleClass="headline" text="Home Page" textAlignment="CENTER" />
+            <ImageView fitHeight="58.0" fitWidth="71.0" layoutX="123.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/homeScreenPic/home.gif" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="48.0" fitWidth="44.0" layoutX="120.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/homeScreenPic/bag.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="48.0" fitWidth="44.0" layoutX="120.0" layoutY="228.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/homeScreenPic/clipboard.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="48.0" fitWidth="44.0" layoutX="120.0" layoutY="279.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/homeScreenPic/brochure.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="pickupPhoto" fitHeight="48.0" fitWidth="44.0" layoutX="120.0" layoutY="330.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@/homeScreenPic/pickup.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="31.0" layoutY="152.0" />
+         </children></AnchorPane>
+  </items>
+</SplitPane>

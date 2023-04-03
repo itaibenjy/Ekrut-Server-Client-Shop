@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<SplitPane dividerPositions="0.3" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../stylesSheets/generalDesign.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clientGUIControllers.MarketingWorkerSalesController">
+   <items>
+      <AnchorPane id="leftPane" prefHeight="200.0" prefWidth="156.0">
+         <children>
+            <ImageView id="loginImage" fx:id="logoImage" fitHeight="160.0" fitWidth="160.0" layoutX="55.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <Text fx:id="help_label" layoutX="48.0" layoutY="295.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bolder;" text="On this page there are 2 actions that the marketing worker can do:" textAlignment="CENTER" visible="false" wrappingWidth="201.0" />
+            <Button fx:id="LogOut" layoutX="193.0" layoutY="602.0" mnemonicParsing="false" onAction="#LogOut_Pressed" text="Log out" />
+            <Button id="backBtn" fx:id="Back_Button" layoutX="22.0" layoutY="604.0" mnemonicParsing="false" onAction="#BackButton_Pressed" text="&lt;" />
+            <Text fx:id="help_label1" layoutX="45.0" layoutY="425.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bolder;" text="2) End active Sales.In order to perform this activity, select a relevant row in the table and press Finish." textAlignment="CENTER" visible="false" wrappingWidth="201.0" />
+            <Text fx:id="help_label2" layoutX="48.0" layoutY="337.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bolder;" text="1) Active sales according to the requests of the marketing manager.In order to perform this activity, select a relevant row in the table and press Active." textAlignment="CENTER" visible="false" wrappingWidth="201.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane id="rightPane" prefHeight="648.0" prefWidth="656.0">
+         <children>
+            <Button id="xBtn" fx:id="Exit_Button" layoutX="610.0" layoutY="14.0" mnemonicParsing="false" onAction="#Exit_Pressed" prefHeight="62.0" prefWidth="74.0" text="X" />
+            <Label layoutX="228.0" layoutY="29.0" prefHeight="62.0" prefWidth="254.0" styleClass="headline" text="Update Sales" textAlignment="CENTER" wrapText="true">
+               <font>
+                  <Font size="7.0" />
+               </font>
+            </Label>
+            <Label layoutX="42.0" layoutY="110.0" text="Sales to active:" />
+            <Button fx:id="Active_Button" layoutX="561.0" layoutY="307.0" mnemonicParsing="false" onAction="#ActiveButton_Pressed" prefHeight="27.0" prefWidth="64.0" text="Active" />
+            <Label id="errorLabelBen" fx:id="NoSalesToActiveLabel" layoutX="168.0" layoutY="112.0" text="No sales to active " visible="false" />
+            <TableView fx:id="salesToActive" layoutX="116.0" layoutY="146.0" prefHeight="160.0" prefWidth="459.0">
+               <columns>
+                  <TableColumn fx:id="SaleIDCol_SalesToActive" prefWidth="83.0" text="Sale ID" />
+                  <TableColumn fx:id="SalePatternID_SalesToActive" prefWidth="134.0" text="Sale Pattern ID" />
+                  <TableColumn fx:id="SaleStartDate_SalesToActive" prefWidth="118.0" text="Sale start Date" />
+                  <TableColumn fx:id="SaleEndDate_SalesToActive" prefWidth="123.0" text="Sale end Date" />
+               </columns>
+            </TableView>
+            <Label id="errorLabel" fx:id="chooseLineErrorTable2" layoutX="408.0" layoutY="317.0" text="You need to choose 1 sale" visible="false" />
+            <Button fx:id="Finish_Button" layoutX="561.0" layoutY="592.0" mnemonicParsing="false" onAction="#FinishButton_Pressed" prefHeight="27.0" prefWidth="64.0" text="Finish" />
+            <TableView fx:id="activeSales" layoutX="116.0" layoutY="396.0" prefHeight="178.0" prefWidth="459.0">
+               <columns>
+                  <TableColumn fx:id="SaleIDCol_ActiveSales" prefWidth="83.0" text="Sale ID" />
+                  <TableColumn fx:id="SalePatternID_ActiveSales" prefWidth="134.0" text="Sale Pattern ID" />
+                  <TableColumn fx:id="SaleStartDate_ActiveSales" prefWidth="118.0" text="Sale start Date" />
+                  <TableColumn fx:id="SaleEndDate_ActiveSales" prefWidth="123.0" text="Sale end Date" />
+               </columns>
+            </TableView>
+            <Label layoutX="41.0" layoutY="359.0" text="Active sales:" />
+            <Label id="errorLabelBen" fx:id="NoActiveSalesLabel" layoutX="159.0" layoutY="361.0" text="No active sales" visible="false" />
+            <Label id="errorLabel" fx:id="chooseLineErrorTable1" layoutX="408.0" layoutY="596.0" text="You need to choose 1 sale" visible="false" />
+            <Button id="helpBtn" fx:id="help_button" layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onAction="#helpButton_Pressed" text="Help" />
+            <ImageView fx:id="activeSalegif" fitHeight="47.0" fitWidth="54.0" layoutX="168.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </AnchorPane>
+   </items>
+</SplitPane>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<SplitPane dividerPositions="0.3" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../stylesSheets/generalDesign.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clientGUIControllers.PickUpOrderController">
+   <items>
+      <AnchorPane id="leftPane" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Button id="logOutBtn" fx:id="LogOut" layoutX="193.0" layoutY="604.0" mnemonicParsing="false" onAction="#LogOut_Pressed" prefHeight="33.0" prefWidth="69.0" text="Log out" />
+            <Button id="backBtn" fx:id="Back_Button" layoutX="22.0" layoutY="602.0" mnemonicParsing="false" onAction="#BackButton_Pressed" text="&lt;" />
+            <ImageView id="logo" fx:id="logoImage" fitHeight="160.0" fitWidth="160.0" layoutX="55.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <Text fx:id="help_label" layoutX="37.0" layoutY="361.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bolder;" text="On this page a customer will make a collection for his order.If the order is not found, a message will be sent with the location of the appropriate facility if the order exists." textAlignment="CENTER" visible="false" wrappingWidth="201.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane id="rightPane" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Button id="xBtn" fx:id="Exit_Button" layoutX="610.0" layoutY="14.0" mnemonicParsing="false" onAction="#Exit_Pressed" prefHeight="45.0" prefWidth="24.0" text="X" />
+            <Label layoutX="201.0" layoutY="52.0" styleClass="headline" text="Pick Up Order" />
+            <Label layoutX="274.0" layoutY="153.0" text="Enter Order ID:" />
+            <Button fx:id="pickButton" layoutX="312.0" layoutY="516.0" mnemonicParsing="false" onAction="#pickButton_Pressed" text="Pick" visible="false" />
+            <TextField fx:id="entrerOrderField" layoutX="259.0" layoutY="215.0" promptText="Order ID" />
+            <Label fx:id="orderFoundLabel" layoutX="255.0" layoutY="460.0" text="Order found, pick up?" visible="false" />
+            <Label id="errorLabel" fx:id="errorLabel" layoutX="302.0" layoutY="347.0" text="Error facility" visible="false" />
+            <Button fx:id="search_Button" layoutX="304.0" layoutY="282.0" mnemonicParsing="false" onAction="#searchButton_Pressed" text="Search" />
+            <Label id="errorLabel" fx:id="labelWrong" layoutX="166.0" layoutY="422.0" text="Sorry but this is the wrong facility, you will need to collect from: &quot;" visible="false" />
+            <Label id="errorLabel" fx:id="labelCollected" layoutX="238.0" layoutY="387.0" text="Sorry but the order has already been collected" visible="false" />
+            <ImageView fx:id="complete" fitHeight="53.0" fitWidth="51.0" layoutX="124.0" layoutY="49.0" pickOnBounds="true" preserveRatio="true" />
+            <Button id="helpBtn" fx:id="help_button" layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onAction="#helpButton_Pressed" text="Help" />
+         </children>
+      </AnchorPane>
+   </items>
+</SplitPane>

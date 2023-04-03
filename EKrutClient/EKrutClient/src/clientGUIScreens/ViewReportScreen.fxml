@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+<SplitPane dividerPositions="0.3" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../stylesSheets/generalDesign.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clientGUIControllers.ViewReportController">
+   <items>
+      <AnchorPane id="leftPane" prefHeight="398.0" prefWidth="244.0">
+         <children>
+            <Button id="backBtn" fx:id="backButton" layoutX="22.0" layoutY="604.0" mnemonicParsing="false" onAction="#backButton_ButtonPressed" prefHeight="29.0" prefWidth="24.0" text="&lt;" />
+            <Button id="logOutBtn" fx:id="logOut" layoutX="193.0" layoutY="602.0" mnemonicParsing="false" onAction="#logOut_ButtonPressed" prefHeight="28.0" prefWidth="90.0" text="Log out" />
+            <ImageView fx:id="logoImage" fitHeight="160.0" fitWidth="160.0" layoutX="55.0" layoutY="50.0" pickOnBounds="true" preserveRatio="true" />
+            <Text fx:id="explains" layoutX="36.0" layoutY="339.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bolder;" text="Only after you choose all relevant paramrters from combo box , System will search for report" textAlignment="CENTER" visible="false" wrappingWidth="198.99996948242188">
+               <font>
+                  <Font size="14.0" />
+               </font></Text>
+         </children></AnchorPane>
+      <AnchorPane id="rightPane" prefHeight="650.0" prefWidth="967.0" stylesheets="@../stylesSheets/generalDesign.css">
+         <children>
+            <ComboBox fx:id="yearComboBox" layoutX="314.0" layoutY="247.0" onAction="#yearComboBoxPressed" prefHeight="34.0" prefWidth="168.0" promptText="Select Year" />
+            <ComboBox fx:id="monthComboBox" layoutX="314.0" layoutY="313.0" onAction="#monthComboBoxPressed" prefHeight="34.0" prefWidth="168.0" promptText="Select Month" />
+            <ComboBox fx:id="typeComboBox" layoutX="314.0" layoutY="384.0" onAction="#selectTypeComboBoxPressed" prefHeight="34.0" prefWidth="168.0" promptText="Select Type" />
+            <Label layoutX="166.0" layoutY="254.0" prefHeight="18.0" prefWidth="122.0" text="Select Year" />
+            <Label layoutX="166.0" layoutY="320.0" prefHeight="18.0" prefWidth="132.0" text="Select Month" />
+            <Label layoutX="166.0" layoutY="391.0" prefHeight="18.0" prefWidth="122.0" text="Selelct Type" />
+            <Label fx:id="areaLabelUnderline" layoutX="297.0" layoutY="139.0" text="Area" underline="true" />
+            <Button id="xBtn" layoutX="610.0" layoutY="14.0" mnemonicParsing="false" onAction="#x_ButtonPressed" prefHeight="34.0" prefWidth="33.0" text="X" fx:id="xButton" />
+            <Button id="bigbutton" fx:id="generateReportButton" layoutX="196.0" layoutY="545.0" mnemonicParsing="false" onAction="#generateReportButton_Pressed" prefHeight="54.0" prefWidth="235.0" styleClass="bigbutton" text="Search For Report">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Label id="headline" layoutX="190.0" layoutY="69.0" styleClass="headline" text="Report Screen">
+               <font>
+                  <Font name="Elephant" size="13.0" />
+               </font>
+            </Label>
+            <Label id="errorLabel" fx:id="errorlabel" layoutX="217.0" layoutY="493.0" prefHeight="34.0" prefWidth="209.0" styleClass="errorLabel" text="Report Doesn`t Exist , Try Again!" textAlignment="CENTER" visible="false" />
+            <ComboBox fx:id="selectFacility_ComboBox" disable="true" layoutX="314.0" layoutY="448.0" onAction="#selectFacility_ComboBox_Pressed" prefHeight="34.0" prefWidth="168.0" promptText="Select Facility" visible="false" />
+            <Label fx:id="selectFacility" layoutX="166.0" layoutY="458.0" text="Select Facility" visible="false" />
+            <ComboBox fx:id="areaComboBox" layoutX="314.0" layoutY="187.0" onAction="#areaComboBoxPressed" prefHeight="34.0" prefWidth="168.0" promptText="Select Area" />
+            <Label fx:id="selectAreaLabel" layoutX="166.0" layoutY="195.0" prefHeight="18.0" prefWidth="122.0" text="Select Area">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+               </font></Label>
+            <Label id="errorLabel" fx:id="msgForArea" layoutX="485.0" layoutY="461.0" text="Choose Area" visible="false" />
+            <Label id="errorLabel" fx:id="errYear" layoutX="492.0" layoutY="256.0" text="Select year" visible="false" />
+            <Label id="errorLabel" fx:id="errMonth" layoutX="487.0" layoutY="323.0" text="Select month" visible="false" />
+            <Label id="errorLabel" fx:id="errType" layoutX="486.0" layoutY="394.0" text="Select type" visible="false" />
+            <Label id="errorLabel" fx:id="errArea" layoutX="490.0" layoutY="197.0" text="Select area" visible="false" />
+            <Label id="errorLabel" fx:id="errFacility" layoutX="486.0" layoutY="461.0" text="Select facility" visible="false" />
+            <ImageView fx:id="reportGif" fitHeight="62.0" fitWidth="74.0" layoutX="103.0" layoutY="69.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="areaLogo" fitHeight="44.0" fitWidth="50.0" layoutX="238.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true" />
+            <Button id="helpBtn" fx:id="help" layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onAction="#helpPress" text="Help" />
+            <Label fx:id="areaLabel" layoutX="354.0" layoutY="139.0" prefHeight="22.0" prefWidth="105.0" text="Label" />
+         </children>
+      </AnchorPane>
+   </items>
+</SplitPane>

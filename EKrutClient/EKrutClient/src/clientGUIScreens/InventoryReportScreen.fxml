@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.chart.StackedBarChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<SplitPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@../stylesSheets/generalDesign.css" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="clientGUIControllers.InventoryReportController">
+   <items>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <AnchorPane id="Report" layoutX="7.0" layoutY="2.0" prefHeight="643.0" prefWidth="950.0">
+               <children>
+                  <Label layoutX="357.0" layoutY="37.0" styleClass="headline" text="Inventory Report" />
+                  <Button layoutX="900.0" layoutY="10.0" mnemonicParsing="false" onAction="#x_ButtonPressed" prefWidth="36.0" text="X" fx:id="xButton" />
+                  <Label fx:id="area_label" layoutX="409.0" layoutY="110.0" text="Area" />
+                  <Label fx:id="month_label" layoutX="796.0" layoutY="110.0" text="month" />
+                  <Label fx:id="year_label" layoutX="591.0" layoutY="110.0" text="year" />
+                  <PieChart fx:id="inventoryReportPie" layoutX="33.0" layoutY="262.0" prefHeight="376.0" prefWidth="474.0" />
+                  <Label id="smallHead" layoutX="528.0" layoutY="109.0" text="Year :" underline="true" />
+                  <Label id="smallHead" layoutX="347.0" layoutY="109.0" text="Area :" underline="true" />
+                  <Label id="smallHead" layoutX="716.0" layoutY="109.0" text="Month :" underline="true" />
+                  <Button fx:id="backButton" layoutX="5.0" layoutY="610.0" mnemonicParsing="false" onAction="#backButton_ButtonPressed" prefHeight="34.0" prefWidth="33.0" text="&lt;" />
+                  <Button fx:id="logOut" layoutX="74.0" layoutY="612.0" mnemonicParsing="false" onAction="#logOut_ButtonPressed" prefHeight="34.0" prefWidth="73.0" text="Log Out" visible="false" />
+                  <Label id="smallHead" layoutX="146.0" layoutY="109.0" text="Facility :" underline="true" />
+                  <Label fx:id="facilityID" layoutX="232.0" layoutY="109.0" prefHeight="22.0" prefWidth="79.0" text="Label" />
+                  <ImageView fitHeight="46.0" fitWidth="45.0" layoutX="294.0" layoutY="39.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/ReportPhotos/inventory.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="662.0" layoutY="276.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Count for a particular product was below the defined threshold level" textAlignment="CENTER" wrappingWidth="231.0">
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font>
+                  </Text>
+                  <ImageView fitHeight="97.0" fitWidth="106.0" layoutX="2.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/EKRUTLOGONOCIRCLE.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="600.0" layoutY="182.0" />
+                  <Text layoutX="500.0" layoutY="201.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Number of products with vaild inventory during this month :" wrappingWidth="203.0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="vaildNum" fill="#00ace6" layoutX="707.0" layoutY="216.0" strokeType="OUTSIDE" strokeWidth="0.0" text="?" wrappingWidth="30.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <Label layoutX="552.0" layoutY="164.0" />
+                  <ImageView fitHeight="23.0" fitWidth="30.0" layoutX="463.0" layoutY="193.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/ReportPhotos/V.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="22.0" fitWidth="23.0" layoutX="905.0" layoutY="620.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@/ReportPhotos/copyright.png" />
+                     </image>
+                  </ImageView>
+                  <Text layoutX="232.0" layoutY="214.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Products :" wrappingWidth="99.00001525878906">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="numOfTotalOrders_label" fill="#00ace6" layoutX="343.0" layoutY="215.0" strokeType="OUTSIDE" strokeWidth="0.0" text="?" wrappingWidth="30.0">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Text>
+                  <StackedBarChart fx:id="inventoryReportHistogram" layoutX="549.0" layoutY="301.0" prefHeight="349.0" prefWidth="392.0">
+                    <xAxis>
+                      <CategoryAxis label="Product Name" side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis label="Passed Threshold Count" side="LEFT" />
+                    </yAxis>
+                  </StackedBarChart>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </items>
+</SplitPane>
